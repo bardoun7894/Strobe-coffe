@@ -19,8 +19,8 @@ const Location: React.FC = () => {
             <div className="space-y-1">
               <h3 className="font-bold">Our Address</h3>
               <p className="text-[#2c2d2a]/60 leading-relaxed">
-                42 Specialty Lane <br />
-                Coffee Quarter, NY 10001
+                WestGate Business Hub, Central <br />
+                First 6th of October, Giza Governorate 3233403, Egypt
               </p>
             </div>
           </div>
@@ -31,10 +31,8 @@ const Location: React.FC = () => {
             </div>
             <div className="space-y-1">
               <h3 className="font-bold">Opening Hours</h3>
-              <div className="grid grid-cols-2 gap-x-8 text-[#2c2d2a]/60 text-sm">
-                <span>Mon - Fri</span> <span>07:00 - 18:00</span>
-                <span>Saturday</span> <span>08:00 - 19:00</span>
-                <span>Sunday</span> <span>09:00 - 17:00</span>
+              <div className="text-[#2c2d2a]/60 text-sm font-medium">
+                <p>Everyday: 08:00 AM - 01:00 AM</p>
               </div>
             </div>
           </div>
