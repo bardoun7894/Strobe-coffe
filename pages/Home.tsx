@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, ArrowRight, Sparkles, ShoppingBag, ArrowUpRight } from 'lucide-react';
+import { MapPin, ArrowRight, Sparkles, ShoppingBag, ArrowUpRight, Plus } from 'lucide-react';
 import { FEATURED_DRINKS } from '../constants';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -153,28 +153,67 @@ const Home: React.FC = () => {
 
       {/* Featured Teaser */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="space-y-2">
-            <h2 className="text-4xl md:text-6xl font-serif text-[#2c2d2a]">Roaster's Choice</h2>
-            <p className="text-[#2c2d2a]/40 font-medium">This month's standout small-batches.</p>
-          </div>
-          <Link to="/menu" className="text-sm font-bold text-[#b7926a] hover:gap-3 transition-all flex items-center gap-2 group">
-            Full Collection <ArrowRight size={20} className="group-hover:translate-x-1" />
-          </Link>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-[#2c2d2a]/10 pb-8">
+           <div className="space-y-3">
+              <span className="text-[#b7926a] font-bold tracking-widest uppercase text-sm">Weekly Drop</span>
+              <h2 className="text-5xl md:text-7xl font-serif text-[#2c2d2a]">Roaster's Choice</h2>
+           </div>
+           <Link to="/menu" className="group flex items-center gap-2 text-sm font-bold text-[#2c2d2a] hover:text-[#b7926a] transition-colors">
+              <span>View All Beans</span>
+              <div className="w-8 h-8 rounded-full border border-[#2c2d2a]/20 flex items-center justify-center group-hover:bg-[#b7926a] group-hover:border-transparent group-hover:text-white transition-all">
+                 <ArrowRight size={14} />
+              </div>
+           </Link>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
           {FEATURED_DRINKS.map((drink) => (
-            <div key={drink.id} className="group cursor-default space-y-8">
-              <div className="aspect-square rounded-[3rem] overflow-hidden shadow-sm bg-white border border-[#2c2d2a]/5">
-                <img src={drink.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt={drink.name} />
+            <div key={drink.id} className="group flex flex-col gap-6 cursor-pointer">
+              
+              {/* Image Card */}
+              <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#eae6de]">
+                 <img 
+                   src={drink.image} 
+                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
+                   alt={drink.name} 
+                 />
+                 
+                 {/* Overlay Gradient */}
+                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+
+                 {/* Tag */}
+                 {drink.tag && (
+                    <div className="absolute top-5 left-5 bg-[#b7926a] text-white text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">
+                        {drink.tag}
+                    </div>
+                 )}
+
+                 {/* Floating Action Button */}
+                 <div className="absolute bottom-5 right-5 translate-y-20 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+                    <button className="w-12 h-12 bg-white text-[#2c2d2a] rounded-full flex items-center justify-center shadow-xl hover:bg-[#b7926a] hover:text-white transition-colors">
+                       <Plus size={24} />
+                    </button>
+                 </div>
               </div>
+
+              {/* Text Content */}
               <div className="space-y-3">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-2xl font-bold text-[#2c2d2a]">{drink.name}</h3>
-                  <span className="font-bold text-[#b7926a] text-lg">{drink.price}</span>
-                </div>
-                <p className="text-[#2c2d2a]/50 text-md leading-relaxed">{drink.description}</p>
+                 <div className="flex justify-between items-start border-b border-[#2c2d2a]/10 pb-4">
+                    <h3 className="text-2xl font-serif text-[#2c2d2a] max-w-[70%] leading-tight">{drink.name}</h3>
+                    <span className="text-lg font-bold text-[#b7926a]">{drink.price}</span>
+                 </div>
+                 
+                 <p className="text-[#2c2d2a]/60 text-sm leading-relaxed line-clamp-2">
+                    {drink.description}
+                 </p>
+
+                 {/* Attributes */}
+                 <div className="flex gap-2 pt-1 opacity-60 group-hover:opacity-100 transition-opacity">
+                    <span className="text-[10px] uppercase font-bold tracking-wider border border-[#2c2d2a]/20 px-2 py-1 rounded-md text-[#2c2d2a]">Fair Trade</span>
+                    <span className="text-[10px] uppercase font-bold tracking-wider border border-[#2c2d2a]/20 px-2 py-1 rounded-md text-[#2c2d2a]">Washed</span>
+                 </div>
               </div>
             </div>
           ))}
