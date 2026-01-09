@@ -57,22 +57,15 @@ const Home: React.FC = () => {
           <div className="hero-image relative order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-full max-w-lg aspect-square">
               {/* Composition of Bag and Cup */}
-              <div className="absolute right-0 top-0 w-3/4 h-3/4 z-10">
+              <div className="absolute inset-0 z-10 w-full h-full">
                 <img
-                  src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800"
-                  alt="Coffee Bag"
-                  className="w-full h-full object-contain mix-blend-difference drop-shadow-2xl rotate-3 opacity-90"
-                />
-              </div>
-              <div className="absolute left-0 bottom-0 w-2/3 h-2/3 z-20">
-                <img
-                  src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600"
-                  alt="Coffee Cup"
-                  className="w-full h-full object-contain mix-blend-normal drop-shadow-2xl"
+                  src="/assets/hero-beans.jpg"
+                  alt="Premium Coffee Beans"
+                  className="w-full h-full object-cover rounded-[3rem] shadow-2xl rotate-3 opacity-90"
                 />
               </div>
               {/* Decorative Circle */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-accent/10 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-accent/20 rounded-full blur-3xl -z-10"></div>
             </div>
           </div>
 
@@ -86,8 +79,8 @@ const Home: React.FC = () => {
           {/* Menu Tile */}
           <Link to="/menu" className="group relative h-72 rounded-[2rem] overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=800"
-              alt="Pour over coffee"
+              src="/assets/cups-mockup.jpg"
+              alt="Coffee Collection"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -118,8 +111,8 @@ const Home: React.FC = () => {
           {/* Contact Tile */}
           <Link to="/contact" className="group relative h-72 rounded-[2rem] overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800"
-              alt="People in cafe"
+              src="/assets/story-interior.jpg"
+              alt="Our Storefront"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -134,11 +127,11 @@ const Home: React.FC = () => {
           {/* Story Tile */}
           <Link to="/about" className="group relative h-72 rounded-[2rem] overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=800"
-              alt="Barista pouring"
+              src="/assets/bag-mockup.jpg"
+              alt="Our Story"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
             />
-            <div className="absolute inset-0 bg-accent/80 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-accent/20 mix-blend-multiply"></div>
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
               <span className="text-3xl font-serif text-white">Our Story</span>
@@ -148,6 +141,54 @@ const Home: React.FC = () => {
             </div>
           </Link>
 
+        </div>
+      </section>
+
+      {/* Flagship Store Section */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="relative rounded-[3rem] overflow-hidden aspect-[16/6] min-h-[400px]">
+          <img
+            src="/assets/storefront.jpg"
+            alt="Our Flagship Store"
+            className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 flex flex-col justify-center px-12 md:px-24 space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 w-fit">
+              <MapPin size={16} />
+              <span className="text-sm font-bold uppercase tracking-wider">Coffee Quarter, NY</span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-serif text-white max-w-xl">
+              Experience <br /><span className="italic text-accent">The Space.</span>
+            </h2>
+            <Link to="/location" className="h-14 px-8 rounded-2xl bg-white text-black hover:bg-accent hover:text-white font-bold flex items-center gap-3 transition-all w-fit mt-4">
+              Visit Us <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Flagship Store Section */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="relative rounded-[3rem] overflow-hidden aspect-[16/6] min-h-[400px]">
+          <img
+            src="/assets/storefront.jpg"
+            alt="Our Flagship Store"
+            className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 flex flex-col justify-center px-12 md:px-24 space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 w-fit">
+              <MapPin size={16} />
+              <span className="text-sm font-bold uppercase tracking-wider">Coffee Quarter, NY</span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-serif text-white max-w-xl">
+              Experience <br /><span className="italic text-accent">The Space.</span>
+            </h2>
+            <Link to="/location" className="h-14 px-8 rounded-2xl bg-white text-black hover:bg-accent hover:text-white font-bold flex items-center gap-3 transition-all w-fit mt-4">
+              Visit Us <ArrowRight size={20} />
+            </Link>
+          </div>
         </div>
       </section>
 
