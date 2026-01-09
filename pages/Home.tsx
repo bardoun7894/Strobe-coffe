@@ -74,6 +74,10 @@ const Home: React.FC = () => {
 
       {/* Modern Visual Navigation Tiles */}
       <section className="max-w-7xl mx-auto px-6">
+        <div className="flex items-end justify-between mb-8">
+          <h2 className="text-3xl md:text-4xl font-serif text-primary">Explore</h2>
+          <div className="h-px flex-1 bg-primary/10 ml-8 mb-2"></div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
 
           {/* Menu Tile */}
@@ -168,27 +172,43 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Flagship Store Section */}
+      {/* Mobile App Section */}
       <section className="max-w-7xl mx-auto px-6">
-        <div className="relative rounded-[3rem] overflow-hidden aspect-[16/6] min-h-[400px]">
-          <img
-            src="/assets/storefront.jpg"
-            alt="Our Flagship Store"
-            className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
-          <div className="absolute inset-0 flex flex-col justify-center px-12 md:px-24 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 w-fit">
-              <MapPin size={16} />
-              <span className="text-sm font-bold uppercase tracking-wider">Coffee Quarter, NY</span>
+        <div className="bg-primary text-background rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-bold border border-white/20">
+                <Sparkles size={16} />
+                <span>Now Available</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-serif text-white">
+                Order Ahead. <br />
+                <span className="text-accent italic">Skip the Line.</span>
+              </h2>
+              <p className="text-white/60 text-lg leading-relaxed max-w-md">
+                Get exclusive rewards, order your favorites, and find your nearest Strobe Coffee with our new mobile app.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <button className="h-14 px-8 rounded-xl bg-white text-primary font-bold hover:bg-accent hover:text-white transition-all">
+                  Download for iOS
+                </button>
+                <button className="h-14 px-8 rounded-xl border border-white/20 text-white font-bold hover:bg-white/10 transition-all">
+                  Android
+                </button>
+              </div>
             </div>
-            <h2 className="text-5xl md:text-7xl font-serif text-white max-w-xl">
-              Experience <br /><span className="italic text-accent">The Space.</span>
-            </h2>
-            <Link to="/location" className="h-14 px-8 rounded-2xl bg-white text-black hover:bg-accent hover:text-white font-bold flex items-center gap-3 transition-all w-fit mt-4">
-              Visit Us <ArrowRight size={20} />
-            </Link>
+            <div className="relative h-[400px] md:h-[500px] flex justify-center items-center">
+              <img
+                src="/assets/app-mockup.jpg"
+                alt="Strobe Mobile App"
+                className="w-full h-full object-contain drop-shadow-2xl rotate-[-5deg] hover:rotate-0 transition-transform duration-500"
+              />
+              {/* Glow effect */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-accent/20 rounded-full blur-3xl -z-10"></div>
+            </div>
           </div>
+          {/* Background decorative elements */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         </div>
       </section>
 
