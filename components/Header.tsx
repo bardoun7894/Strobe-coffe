@@ -19,9 +19,9 @@ const Header: React.FC = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[#2c2d2a]/5 bg-[#fcfaf7]/90 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 text-[#2c2d2a]">
-          <img src="/assets/logo.png" alt="Strobe Coffee Logo" className="w-8 h-8 object-contain" />
-          <span className="text-lg font-bold tracking-tight">Strobe Coffee</span>
+        <Link to="/" className="flex items-center gap-3 text-[#2c2d2a]">
+          <img src="/assets/logo.png" alt="Strobe Coffee Logo" className="w-14 h-14 object-contain" />
+          <span className="text-xl font-bold tracking-tight">Strobe Coffee</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -30,9 +30,8 @@ const Header: React.FC = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-medium transition-colors ${
-                isActive(item.path) ? 'text-[#b7926a]' : 'text-[#2c2d2a]/70 hover:text-[#2c2d2a]'
-              }`}
+              className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-[#b7926a]' : 'text-[#2c2d2a]/70 hover:text-[#2c2d2a]'
+                }`}
             >
               {item.label}
             </Link>
@@ -43,7 +42,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden p-2 text-[#2c2d2a]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
