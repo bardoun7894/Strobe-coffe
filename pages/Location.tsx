@@ -38,9 +38,14 @@ const Location: React.FC = () => {
           </div>
         </div>
 
-        <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#2c2d2a] text-[#fcfaf7] px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-lg transition-all">
+        <a
+          href="https://maps.app.goo.gl/eVMy8Ce3Ppk7dWtN8?g_st=ipc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#2c2d2a] text-[#fcfaf7] px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-lg transition-all"
+        >
           <Navigation size={20} /> Open in Google Maps
-        </button>
+        </a>
       </div>
 
       <div className="relative">
