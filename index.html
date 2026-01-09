@@ -1,50 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strobe Coffee | Brew the Moment</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Montserrat', 'sans-serif'],
-              serif: ['Coolvetica', 'Montserrat', 'sans-serif'],
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strobe Coffee | Brew the Moment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0f0e0e',
+            primary: '#e6dcca',
+            accent: '#b7926a'
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
           }
         }
       }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-        /* Fallback/Local Coolvetica Definition */
-        @font-face {
-          font-family: 'Coolvetica';
-          src: local('Coolvetica'), local('Coolvetica Regular');
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        /* 
-           Hijacking the existing .font-serif class to apply the 
-           Coolvetica Display aesthetic (Heavy, Tight Tracking) 
-           instead of a traditional serif.
-        */
-        .font-serif {
-            font-family: 'Coolvetica', 'Montserrat', sans-serif;
-            font-weight: 800; 
-            letter-spacing: -0.04em; 
-        }
-    </style>
-<script type="importmap">
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+  <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.2.3/",
@@ -58,8 +48,10 @@
 }
 </script>
 </head>
-<body class="bg-[#fcfaf7] text-[#2c2d2a]">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+
+<body class="bg-background text-primary selection:bg-accent selection:text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
