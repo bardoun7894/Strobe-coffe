@@ -20,9 +20,7 @@ const Header: React.FC = () => {
     <nav className="sticky top-0 z-50 w-full border-b border-[#2c2d2a]/5 bg-[#fcfaf7]/90 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-[#2c2d2a]">
-          <div className="flex items-center justify-center rounded bg-[#2c2d2a] w-8 h-8 text-[#b7926a]">
-            <Coffee size={18} />
-          </div>
+          <img src="/assets/logo.png" alt="Strobe Coffee Logo" className="w-8 h-8 object-contain" />
           <span className="text-lg font-bold tracking-tight">Strobe Coffee</span>
         </Link>
 

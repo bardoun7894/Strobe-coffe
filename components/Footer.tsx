@@ -9,14 +9,12 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-3">
             <div className="flex items-center gap-2 text-[#2c2d2a]">
-              <div className="flex items-center justify-center rounded bg-[#2c2d2a] w-6 h-6 text-[#b7926a]">
-                <Coffee size={14} />
-              </div>
+              <img src="/assets/logo.png" alt="Strobe Coffee Logo" className="w-6 h-6 object-contain" />
               <h2 className="text-md font-bold">Strobe Coffee</h2>
             </div>
             <p className="text-sm text-[#2c2d2a]/40">© 2024 Strobe Coffee Roasters.</p>
           </div>
-          
+
           <div className="flex gap-8 text-sm font-medium text-[#2c2d2a]/60">
             <a href="#" className="flex items-center gap-2 hover:text-[#b7926a] transition-colors">
               <Instagram size={16} /> Instagram
