@@ -9,8 +9,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-3">
             <div className="flex items-center gap-3 text-[#2c2d2a]">
-              <img src="/assets/logo.png" alt="Strobe Coffee Logo" className="w-10 h-10 object-contain" />
-              <h2 className="text-lg font-bold">Strobe Coffee</h2>
+              <img src="/assets/logo.png" alt="Strobe Coffee" className="h-24 w-auto object-contain" />
             </div>
             <p className="text-sm text-[#2c2d2a]/40">© 2024 Strobe Coffee Roasters.</p>
           </div>
