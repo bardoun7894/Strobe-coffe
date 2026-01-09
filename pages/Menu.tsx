@@ -23,29 +23,6 @@ const Menu: React.FC = () => {
         </div>
       </section>
 
-      <section className="space-y-12">
-        <div className="flex items-center gap-4">
-          <h2 className="text-2xl font-bold">Current Highlights</h2>
-          <div className="h-px flex-1 bg-[#2c2d2a]/10"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {FEATURED_DRINKS.concat(FEATURED_DRINKS[0]).map((drink, idx) => (
-            <div key={`${drink.id}-${idx}`} className="space-y-4">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
-                <img src={drink.image} alt={drink.name} className="w-full h-full object-cover" />
-              </div>
-              <div>
-                <div className="flex justify-between items-center mb-1">
-                  <h3 className="font-bold text-lg">{drink.name}</h3>
-                  <span className="text-[#b7926a] font-bold">{drink.price}</span>
-                </div>
-                <p className="text-sm text-[#2c2d2a]/60 line-clamp-2">{drink.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Full Digital Menu */}
       <section className="space-y-12">
@@ -89,7 +66,7 @@ const Menu: React.FC = () => {
           <p className="text-sm text-[#2c2d2a]/60">Premium alternative milks and vegan-friendly seasonal treats.</p>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 
