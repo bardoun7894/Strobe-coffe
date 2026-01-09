@@ -8,12 +8,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            background: '#0f0e0e',
-            primary: '#e6dcca',
-            accent: '#b7926a'
+            background: 'var(--bg-color)',
+            primary: 'var(--text-color)',
+            accent: 'var(--accent-color)'
           },
           fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
@@ -29,6 +30,19 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
     rel="stylesheet">
   <style>
+    :root {
+      /* Light Mode (Default) */
+      --bg-color: #fcfaf7;
+      --text-color: #2c2d2a;
+      --accent-color: #b7926a;
+    }
+
+    .dark {
+      /* Dark Mode */
+      --bg-color: #0f0e0e;
+      --text-color: #e6dcca;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       scroll-behavior: smooth;
