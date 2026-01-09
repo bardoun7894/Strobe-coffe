@@ -1,0 +1,7 @@
+{
+  "name": "Strobe Coffee",
+  "description": "A modern, minimal specialty coffee shop website with a warm cafe aesthetic and mobile-first design.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
