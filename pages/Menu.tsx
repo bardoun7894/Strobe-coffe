@@ -12,9 +12,9 @@ const Menu: React.FC = () => {
           Our menu changes weekly based on seasonal harvests and roaster favorites. We believe in quality over quantity, focusing on bringing out the unique characteristics of every bean.
         </p>
         <div className="pt-8">
-          <a 
-            href="https://example.com/menu.pdf" 
-            target="_blank" 
+          <a
+            href="https://example.com/menu.pdf"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#b7926a] text-[#fcfaf7] px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-lg hover:-translate-y-1 transition-all"
           >
@@ -28,7 +28,7 @@ const Menu: React.FC = () => {
           <h2 className="text-2xl font-bold">Current Highlights</h2>
           <div className="h-px flex-1 bg-[#2c2d2a]/10"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {FEATURED_DRINKS.concat(FEATURED_DRINKS[0]).map((drink, idx) => (
             <div key={`${drink.id}-${idx}`} className="space-y-4">
@@ -37,11 +37,30 @@ const Menu: React.FC = () => {
               </div>
               <div>
                 <div className="flex justify-between items-center mb-1">
-                   <h3 className="font-bold text-lg">{drink.name}</h3>
-                   <span className="text-[#b7926a] font-bold">{drink.price}</span>
+                  <h3 className="font-bold text-lg">{drink.name}</h3>
+                  <span className="text-[#b7926a] font-bold">{drink.price}</span>
                 </div>
                 <p className="text-sm text-[#2c2d2a]/60 line-clamp-2">{drink.description}</p>
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Full Digital Menu */}
+      <section className="space-y-12">
+        <div className="flex items-center gap-4">
+          <h2 className="text-2xl font-bold">Full Menu</h2>
+          <div className="h-px flex-1 bg-[#2c2d2a]/10"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white">
+              <img
+                src={`/assets/menu/page-${num}.jpg`}
+                alt={`Menu Page ${num}`}
+                className="w-full h-auto object-cover"
+              />
             </div>
           ))}
         </div>
