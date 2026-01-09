@@ -27,7 +27,7 @@ const Menu: React.FC = () => {
       {/* Full Digital Menu */}
       <section className="space-y-12">
         <div className="flex items-center gap-4">
-          <h2 className="text-2xl font-bold">Full Menu</h2>
+          <h2 className="text-2xl font-bold"> Menu</h2>
           <div className="h-px flex-1 bg-[#2c2d2a]/10"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

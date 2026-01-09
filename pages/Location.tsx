@@ -48,14 +48,15 @@ const Location: React.FC = () => {
       <div className="relative">
         <div className="aspect-square bg-[#eae6de] rounded-[2.5rem] overflow-hidden shadow-sm border-8 border-white p-4">
           {/* Static Map Illustration (Placeholder Image) */}
-          <div className="w-full h-full bg-cover bg-center rounded-2xl relative group cursor-pointer" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200")'}}>
-            <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-all"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-               <div className="w-16 h-16 rounded-full bg-[#b7926a] border-4 border-white flex items-center justify-center animate-bounce shadow-xl">
-                 <MapPin className="text-white" size={24} />
-               </div>
-            </div>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.20437399107!2d30.956954!3d29.973556000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145857002b0b9607%3A0x691e9c45afe983a4!2sStrobe%20Coffee!5e0!3m2!1sar!2sma!4v1768002312332!5m2!1sar!2sma"
+            className="w-full h-full rounded-2xl"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Strobe Coffee Location"
+          ></iframe>
         </div>
         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#b7926a]/5 rounded-full blur-2xl -z-10"></div>
       </div>
