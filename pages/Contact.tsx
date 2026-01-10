@@ -17,26 +17,26 @@ const Contact: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-sm font-bold uppercase tracking-widest text-[#2c2d2a]/40 ml-1">Full Name</label>
-              <input 
-                type="text" 
-                placeholder="Jane Doe" 
+              <input
+                type="text"
+                placeholder="Jane Doe"
                 className="w-full bg-[#fcfaf7] border-transparent rounded-xl px-6 py-4 focus:border-[#b7926a] focus:ring-0 transition-all shadow-sm"
               />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-bold uppercase tracking-widest text-[#2c2d2a]/40 ml-1">Email Address</label>
-              <input 
-                type="email" 
-                placeholder="jane@example.com" 
+              <input
+                type="email"
+                placeholder="jane@example.com"
                 className="w-full bg-[#fcfaf7] border-transparent rounded-xl px-6 py-4 focus:border-[#b7926a] focus:ring-0 transition-all shadow-sm"
               />
             </div>
           </div>
           <div className="space-y-2">
             <label className="text-sm font-bold uppercase tracking-widest text-[#2c2d2a]/40 ml-1">Your Message</label>
-            <textarea 
-              rows={5} 
-              placeholder="Tell us everything..." 
+            <textarea
+              rows={5}
+              placeholder="Tell us everything..."
               className="w-full bg-[#fcfaf7] border-transparent rounded-xl px-6 py-4 focus:border-[#b7926a] focus:ring-0 transition-all shadow-sm"
             ></textarea>
           </div>
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="space-y-0.5">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#2c2d2a]/40">Email</h4>
-            <p className="font-bold">hello@strobe.coffee</p>
+            <p className="font-bold">Contact@strobecoffee.com</p>
           </div>
         </div>
       </div>
