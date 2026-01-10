@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Coffee, Instagram, Twitter } from 'lucide-react';
+import { Coffee, Instagram, Facebook, MessageCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -15,11 +15,14 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex gap-8 text-sm font-medium text-primary/60">
-            <a href="#" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="https://www.instagram.com/strobecoffee?igsh=ZThmamN3M285ODM%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Instagram size={16} /> Instagram
             </a>
-            <a href="#" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Twitter size={16} /> Twitter
+            <a href="https://www.facebook.com/share/1K7t1ueuCQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Facebook size={16} /> Facebook
+            </a>
+            <a href="https://wa.me/201500000293" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <MessageCircle size={16} /> WhatsApp
             </a>
             <a href="#" className="hover:text-accent transition-colors">Privacy</a>
             <a href="#" className="hover:text-accent transition-colors">Terms</a>
